@@ -10,11 +10,11 @@ RUN add-apt-repository ppa:rosecompiler/rose-development -y
 RUN apt-get install rose -y
 RUN apt-get install rose-tools -y
 
-WORKDIR /app
+WORKDIR /home/appuser
 
 RUN groupadd -g 1000 appuser && \
     useradd -r -u 1000 -g appuser appuser
-RUN chown appuser.appuser /app
+RUN chown appuser.appuser /home/appuser
 
 USER appuser
 

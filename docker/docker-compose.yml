@@ -5,3 +5,5 @@ services:
     container_name: rose
     image: rose:bionic-20210118
     command: sleep 10000000
+    volumes:
+       - '$N_ROSE_BASE:/home/appuser/code/'
